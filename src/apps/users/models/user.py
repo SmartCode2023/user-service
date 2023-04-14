@@ -188,10 +188,10 @@ class User(AbstractBaseUser, SharedModelHistorical, Person):
     """
 
     # Roles
-    ADMIN = 1
-    DRIVER = 2
-    OPERATOR = 3
-    CUSTOMER = 4
+    ADMIN = "ADMIN"
+    DRIVER = "DRIVER"
+    OPERATOR = "OPERATOR"
+    CUSTOMER = "CUSTOMER"
     
     ROLE_CHOICES = (
         (ADMIN, "Administrador"),
@@ -215,8 +215,10 @@ class User(AbstractBaseUser, SharedModelHistorical, Person):
         default=False,
         help_text="Designates whether the user can log into this admin site.",
     )
-    role = models.PositiveSmallIntegerField(
+    role = models.CharField(
         "Rol",
+        max_length=20,
+        blank=True,
         choices=ROLE_CHOICES,
         default=ADMIN,
     )
