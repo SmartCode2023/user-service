@@ -18,8 +18,6 @@ RUN apt-get update \
   && useradd --create-home python \
   && chown -R python:python /app
 
-USER python
-
 # Requirements are installed here to ensure they will be cached.
 COPY --chown=python:python ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
