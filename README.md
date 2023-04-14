@@ -13,7 +13,7 @@ El proyecto está configurado para correr en un entorno de desarrollo con Docker
 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ChatHolaMaestro/BackendRest.git
+git clone https://github.com/SmartCode2023/user-service.git
 ```
 
 2. Crear el archivo .env con las variables de entorno (Modificar según sea necesario)
