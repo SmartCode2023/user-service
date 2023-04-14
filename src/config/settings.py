@@ -31,8 +31,6 @@ BASE_APPS = [
 LOCAL_APPS = [
     "apps.shared",
     "apps.users",
-    "apps.authentication",
-
 ]
 
 THIRD_APPS = [
