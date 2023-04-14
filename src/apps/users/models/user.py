@@ -187,13 +187,17 @@ class User(AbstractBaseUser, SharedModelHistorical, Person):
     It uses the email address as the username.
     """
 
+    # Roles
     ADMIN = 1
-    TEACHER = 2
-    SCHOOL_MANAGER = 3
+    DRIVER = 2
+    OPERATOR = 3
+    CUSTOMER = 4
+    
     ROLE_CHOICES = (
         (ADMIN, "Administrador"),
-        (TEACHER, "Profesor"),
-        (SCHOOL_MANAGER, "Director de escuela"),
+        (DRIVER, "Conductor"),
+        (OPERATOR, "Operador"),
+        (CUSTOMER, "Cliente"),
     )
 
     email = models.EmailField(
@@ -214,7 +218,7 @@ class User(AbstractBaseUser, SharedModelHistorical, Person):
     role = models.PositiveSmallIntegerField(
         "Rol",
         choices=ROLE_CHOICES,
-        default=TEACHER,
+        default=ADMIN,
     )
 
     objects = UserManager()

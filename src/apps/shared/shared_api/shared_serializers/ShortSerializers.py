@@ -17,11 +17,12 @@ class UserSerializerShort(serializers.ModelSerializer):
         - phone_number
         - identification_type
         - identification_number
+        - role
     '''
     
     class Meta:
         model = User
-        fields = ('id', 'first_name', 'last_name', 'email', 'phone_number', 'identification_type', 'identification_number')
+        fields = ('id', 'first_name', 'last_name', 'email', 'phone_number', 'identification_type', 'identification_number', 'role')
         
 class PersonSerializerShort(serializers.ModelSerializer):
     '''

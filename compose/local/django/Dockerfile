@@ -30,15 +30,6 @@ RUN chmod +x /entrypoint
 COPY --chown=python:python ./compose/local/django/start /start
 RUN chmod +x /start
 
-#COPY --chown=python:python ./compose/local/django/celery/worker/start /start-celeryworker
-#RUN chmod +x /start-celeryworker
-
-#COPY --chown=python:python ./compose/local/django/celery/beat/start /start-celerybeat
-#RUN chmod +x /start-celerybeat
-
-#COPY --chown=python:python ./compose/local/django/celery/flower/start /start-flower
-#RUN chmod +x /start-flower
-
 WORKDIR /app/src
 
 ENTRYPOINT ["/entrypoint"]
