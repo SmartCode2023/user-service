@@ -27,11 +27,11 @@ services:
       - POSTGRES_USER=${SQL_USER}
       - POSTGRES_PASSWORD=${SQL_PASSWORD}
     ports:
-      - "5436:5436"
+      - "5435:5435"
     expose:
-      - "5436"
-    #Start database on port 5436 instead of 5432
-    command: -p 5436
+      - "5435"
+    #Start database on port 5435 instead of 5432
+    command: -p 5435
 
 
 volumes:
